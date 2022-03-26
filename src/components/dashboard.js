@@ -3,38 +3,9 @@ import { Menu } from 'antd';
 import { Modal, Button } from 'antd';
 import { AppstoreOutlined, MailOutlined, SettingOutlined,DownloadOutlined,EditOutlined} from '@ant-design/icons';
 
-const Dash = () => {
-  const { SubMenu } = Menu;
-
-    // submenu keys of first level
-    const rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
-
-   
-  const [openKeys, setOpenKeys] = React.useState(['sub1']);
-
-  const onOpenChange = keys => {
-    const latestOpenKey = keys.find(key => openKeys.indexOf(key) === -1);
-    if (rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
-      setOpenKeys(keys);
-    } else {
-      setOpenKeys(latestOpenKey ? [latestOpenKey] : []);
-    }
-     };
-     
-     const [isModalVisible, setIsModalVisible] = useState(false);
+const Dash = ({children}) => {
   
-  const showModal = () => {
-    setIsModalVisible(true);
-  };
-
-  const handleOk = () => {
-    setIsModalVisible(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalVisible(false);
-
-  };
+  
     return ( 
        
     
@@ -84,7 +55,7 @@ const Dash = () => {
                       <img src="../img/img9.jpg" className="wd-40 rounded-circle" alt />
                       <div className="media-body">
                         <p className="tx-13 mg-b-0"><strong className="tx-medium">Mellisa Brown</strong> appreciated your work <strong className="tx-medium">The Social Network</strong></p>
-                        <span className="tx-12">October 02, 2017 12:44am</span>
+                        <span className="tx-12">October 033, 2017 12:44am</span>
                       </div>
                     </div>{/* media */}
                   </a>
@@ -140,74 +111,34 @@ const Dash = () => {
             <div id="mainMenu" className="tab-pane active ps ps--theme_default" data-ps-id="9a7da229-6777-9e3e-ea43-00fa91c0bfc4">
               <ul className="nav am-sideleft-menu">
                 <li className="nav-item">
-                  <a href="index.html" className="nav-link active">
+                  <a href="/dashcontent" className="nav-link active">
                     <i className="icon ion-ios-home-outline" />
-                    <span>Dashboard</span>
+                    <span>Application letters</span>
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="/invoices" className="nav-link active">
+                    <i className="icon ion-ios-home-outline" />
+                    <span>Invoices</span>
                   </a>
                 </li>{/* nav-item */}
                 <li className="nav-item">
-                  <a href="#" className="nav-link with-sub">
-                    <i className="icon ion-ios-gear-outline" />
-                    <span>Update</span>
+                  <a href="/letters" className="nav-link active">
+                    <i className="icon ion-ios-home-outline" />
+                    <span>Letters</span>
                   </a>
-                  <ul className="nav-sub">
-                    <li className="nav-item"><a href="form-elements.html" className="nav-link">Form Elements</a></li>
-                    <li className="nav-item"><a href="form-layouts.html" className="nav-link">Form Layouts</a></li>
-                    <li className="nav-item"><a href="form-validation.html" className="nav-link">Form Validation</a></li>
-                    <li className="nav-item"><a href="form-wizards.html" className="nav-link">Form Wizards</a></li>
-                    <li className="nav-item"><a href="form-editor-text.html" className="nav-link">Text Editor</a></li>
-                  </ul>
                 </li>{/* nav-item */}
                 <li className="nav-item">
-                  <a href="#" className="nav-link with-sub">
-                    <i className="icon ion-ios-filing-outline" />
-                    <span>Delete</span>
+                  <a href="/receipt" className="nav-link active">
+                    <i className="icon ion-ios-home-outline" />
+                    <span>Receipt</span>
                   </a>
-                  <ul className="nav-sub">
-                    <li className="nav-item"><a href="accordion.html" className="nav-link">Accordion</a></li>
-                    <li className="nav-item"><a href="alerts.html" className="nav-link">Alerts</a></li>
-                    <li className="nav-item"><a href="buttons.html" className="nav-link">Buttons</a></li>
-                    <li className="nav-item"><a href="cards.html" className="nav-link">Cards</a></li>
-                    <li className="nav-item"><a href="icons.html" className="nav-link">Icons</a></li>
-                    <li className="nav-item"><a href="modal.html" className="nav-link">Modal</a></li>
-                    <li className="nav-item"><a href="navigation.html" className="nav-link">Navigation</a></li>
-                    <li className="nav-item"><a href="pagination.html" className="nav-link">Pagination</a></li>
-                    <li className="nav-item"><a href="popups.html" className="nav-link">Tooltip &amp; Popover</a></li>
-                    <li className="nav-item"><a href="progress.html" className="nav-link">Progress</a></li>
-                    <li className="nav-item"><a href="spinners.html" className="nav-link">Spinners</a></li>
-                    <li className="nav-item"><a href="typography.html" className="nav-link">Typography</a></li>
-                  </ul>
                 </li>{/* nav-item */}
-                <li className="nav-item">
-                  <a href="#" className="nav-link with-sub">
-                    <i className="icon ion-ios-analytics-outline" />
-                    <span>Edit</span>
-                  </a>
-                  <ul className="nav-sub">
-                    <li className="nav-item"><a href="chart-morris.html" className="nav-link">Morris Charts</a></li>
-                    <li className="nav-item"><a href="chart-flot.html" className="nav-link">Flot Charts</a></li>
-                    <li className="nav-item"><a href="chart-chartjs.html" className="nav-link">Chart JS</a></li>
-                    <li className="nav-item"><a href="chart-rickshaw.html" className="nav-link">Rickshaw</a></li>
-                    <li className="nav-item"><a href="chart-sparkline.html" className="nav-link">Sparkline</a></li>
-                  </ul>
-                </li>{/* nav-item */}
-                <li className="nav-item">
-                  <a href="#" className="nav-link with-sub">
-                    <i className="icon ion-ios-person-outline" />
-                    <span>Profile</span>
-                  </a>
-                  <ul className="nav-sub">
-                    <li className="nav-item"><a href="/profile" className="nav-link">Your profile</a></li>
-                    <li className="nav-item"><a href="/edit" className="nav-link">Edit profile</a></li>
-                  </ul>
-                </li>{/* nav-item */}
+                
+                  
                
-                <li className="nav-item">
-                  <a href="widgets.html" className="nav-link">
-                    <i className="icon ion-ios-briefcase-outline" />
-                    <span>Company Info </span>
-                  </a>
-                </li>{/* nav-item */}
+               
+                
               </ul>
   {/* <div>
               <Menu mode="inline" openKeys={openKeys} onOpenChange={onOpenChange} style={{ width: 256 }}>
@@ -382,207 +313,17 @@ const Dash = () => {
             </form>{/* search-bar */}
           </div>{/* am-pagetitle */}
           {/* downloads */}
-          <div>
-          <div class="row row-sm mg-t-15 mg-sm-t-20">
-           
-          <div class="col-lg-4 mg-t-15 mg-sm-t-20 mg-lg-t-0">
-            <div class="card">
-              <div id="map3"></div>
-              <div class="pd-20">
-                <h6 class="tx-inverse tx-14">Small description of the document and it's category</h6>
-                <p class="tx-13 mg-b-0">Izuba restaurant</p>
-                
-
-                <div class="d-flex">
-                 <a href="#" class="btn btn-info bd-0 pd-x-20"><i class="icon ion-ios-downloadoutlined"></i>Downloads <DownloadOutlined></DownloadOutlined></a>
-               <a href="#" class="btn btn-info bd-0 pd-x-20 mg-l-1"><i class=""></i>Edit<EditOutlined></EditOutlined></a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mg-t-15 mg-sm-t-20 mg-lg-t-0">
-            <div class="card">
-              <div id="map3"></div>
-              <div class="pd-20">
-                <h6 class="tx-inverse tx-14">Small description of the document and it's category</h6>
-                <p class="tx-13 mg-b-0">Izuba restaurant</p>
-                
-
-                <div class="d-flex">
-                 <a href="#" class="btn btn-info bd-0 pd-x-20"><i class="icon ion-ios-downloadoutlined"></i>Downloads <DownloadOutlined></DownloadOutlined></a>
-               <a href="#" class="btn btn-info bd-0 pd-x-20 mg-l-1"><i class=""></i>Edit<EditOutlined></EditOutlined></a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mg-t-15 mg-sm-t-20 mg-lg-t-0">
-            <div class="card">
-              <div id="map3"></div>
-              <div class="pd-20">
-                <h6 class="tx-inverse tx-14">Small description of the document and it's category</h6>
-                <p class="tx-13 mg-b-0">Izuba restaurant</p>
-                
-
-                <div class="d-flex">
-                 <a href="#" class="btn btn-info bd-0 pd-x-20"><i class="icon ion-ios-downloadoutlined"></i>Downloads <DownloadOutlined></DownloadOutlined></a>
-               <a href="#" class="btn btn-info bd-0 pd-x-20 mg-l-1"><i class=""></i>Edit<EditOutlined></EditOutlined></a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mg-t-15 mg-sm-t-20 mg-lg-t-0">
-            <div class="card">
-              <div id="map3"></div>
-              <div class="pd-20">
-                <h6 class="tx-inverse tx-14">Small description of the document and it's category</h6>
-                <p class="tx-13 mg-b-0">Izuba restaurant</p>
-                
-
-                <div class="d-flex">
-                 <a href="#" class="btn btn-info bd-0 pd-x-20"><i class="icon ion-ios-downloadoutlined"></i>Downloads <DownloadOutlined></DownloadOutlined></a>
-               <a href="#" class="btn btn-info bd-0 pd-x-20 mg-l-1"><i class=""></i>Edit<EditOutlined></EditOutlined></a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mg-t-15 mg-sm-t-20 mg-lg-t-0">
-            <div class="card">
-              <div id="map3"></div>
-              <div class="pd-20">
-                <h6 class="tx-inverse tx-14">Small description of the document and it's category</h6>
-                <p class="tx-13 mg-b-0">Izuba restaurant</p>
-                
-
-                <div class="d-flex">
-                 <a href="#" class="btn btn-info bd-0 pd-x-20"><i class="icon ion-ios-downloadoutlined"></i>Downloads <DownloadOutlined></DownloadOutlined></a>
-               <a href="#" class="btn btn-info bd-0 pd-x-20 mg-l-1"><i class=""></i>Edit<EditOutlined></EditOutlined></a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mg-t-15 mg-sm-t-20 mg-lg-t-0">
-            <div class="card">
-              <div id="map3"></div>
-              <div class="pd-20">
-                <h6 class="tx-inverse tx-14">Small description of the document and it's category</h6>
-                <p class="tx-13 mg-b-0">Izuba restaurant</p>
-                
-
-                <div class="d-flex">
-                 <a href="#" class="btn btn-info bd-0 pd-x-20"><i class="icon ion-ios-downloadoutlined"></i>Downloads <DownloadOutlined></DownloadOutlined></a>
-               <a href="#" class="btn btn-info bd-0 pd-x-20 mg-l-1"><i class=""></i>Edit<EditOutlined></EditOutlined></a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mg-t-15 mg-sm-t-20 mg-lg-t-0">
-            <div class="card">
-              <div id="map3"></div>
-              <div class="pd-20">
-                <h6 class="tx-inverse tx-14">Small description of the document and it's category</h6>
-                <p class="tx-13 mg-b-0">Izuba restaurant</p>
-                
-
-                <div class="d-flex">
-                 <a href="#" class="btn btn-info bd-0 pd-x-20"><i class="icon ion-ios-downloadoutlined"></i>Downloads <DownloadOutlined></DownloadOutlined></a>
-               <a href="#" class="btn btn-info bd-0 pd-x-20 mg-l-1"><i class=""></i>Edit<EditOutlined></EditOutlined></a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mg-t-15 mg-sm-t-20 mg-lg-t-0">
-            <div class="card">
-              <div id="map3"></div>
-              <div class="pd-20">
-                <h6 class="tx-inverse tx-14">Small description of the document and it's category</h6>
-                <p class="tx-13 mg-b-0">Izuba restaurant</p>
-                
-
-                <div class="d-flex">
-                 <a href="#" class="btn btn-info bd-0 pd-x-20"><i class="icon ion-ios-downloadoutlined"></i>Downloads <DownloadOutlined></DownloadOutlined></a>
-               <a href="#" class="btn btn-info bd-0 pd-x-20 mg-l-1"><i class=""></i>Edit<EditOutlined></EditOutlined></a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 mg-t-15 mg-sm-t-20 mg-lg-t-0">
-            <div class="card">
-              <div id="map3"></div>
-              <div class="pd-20">
-                <h6 class="tx-inverse tx-14">Small description of the document and it's category</h6>
-                <p class="tx-13 mg-b-0">Izuba restaurant</p>
-                
-
-                <div class="d-flex">
-                 <a href="#" class="btn btn-info bd-0 pd-x-20"><i class="icon ion-ios-downloadoutlined"></i>Downloads <DownloadOutlined></DownloadOutlined></a>
-               <a href="#" class="btn btn-info bd-0 pd-x-20 mg-l-1"><i class=""></i>Edit<EditOutlined></EditOutlined></a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mg-t-15 mg-sm-t-20 mg-lg-t-0">
-            <div class="card">
-              <div id="map3"></div>
-              <div class="pd-20">
-                <h6 class="tx-inverse tx-14">Small description of the document and it's category</h6>
-                <p class="tx-13 mg-b-0">Izuba restaurant</p>
-                
-
-                <div class="d-flex">
-                 <a href="#" class="btn btn-info bd-0 pd-x-20"><i class="icon ion-ios-downloadoutlined"></i>Downloads <DownloadOutlined></DownloadOutlined></a>
-               <a href="#" class="btn btn-info bd-0 pd-x-20 mg-l-1"><i class=""></i>Edit<EditOutlined></EditOutlined></a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mg-t-15 mg-sm-t-20 mg-lg-t-0">
-            <div class="card">
-              <div id="map3"></div>
-              <div class="pd-20">
-                <h6 class="tx-inverse tx-14">Small description of the document and it's category</h6>
-                <p class="tx-13 mg-b-0">Izuba restaurant</p>
-                
-
-                <div class="d-flex">
-                 <a href="#" class="btn btn-info bd-0 pd-x-20"><i class="icon ion-ios-downloadoutlined"></i>Downloads <DownloadOutlined></DownloadOutlined></a>
-               <a href="#" class="btn btn-info bd-0 pd-x-20 mg-l-1"><i class=""></i>Edit<EditOutlined></EditOutlined></a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-          </div>
-          <div className="am-footer">
-            <span>Copyright ©. All Rights Reserved. amanda Responsive Bootstrap 4 amanda Dashboard.</span>
-            <span>Created by: ThemePixels, Inc.</span>
-          </div>{/* am-footer */}
+          <div><div/>
+         {/* am-footer */}
           {/* Mirrored from themepixels.me/demo/amanda/app/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Mar 2022 09:59:19 GMT */}
         </div>
         <div>
-       
+       </div>
       </div>
-         
+      {children}
+      
         </div>
+      
       
       
     

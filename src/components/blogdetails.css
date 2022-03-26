@@ -1,0 +1,37 @@
+/* .btoni{
+     margin-top: 165px;
+     
+    display:flex;
+    
+    display: none;
+   border-radius: 12px;
+}
+.blog-details{
+
+    margin-top: 10px;
+    margin-bottom: 190px;
+
+}
+.document{ margin-top: 90px;
+    
+    
+}
+.documa{
+    margin-left: 20px;
+    
+
+}
+.card:hover +.btoni{
+    display:flex;
+    display: block;
+    color:red
+   
+    
+
+}
+.documa{
+    display: flex;
+}
+h2{
+    margin-bottom:130px;
+} */
