@@ -17,7 +17,7 @@ const Homm = () => {
             <p>{name} is {age} years old </p>
           
             <button onClick={handleClick}>click mi</button>
-    <>hello</>
+    <>tiiiiiiii</>
         
         </div>
      );
